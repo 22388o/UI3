@@ -90,7 +90,53 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="section">
       <div class="section-header">Multisig Signature</div>
       <div class="content">
-        <!-- Content related to Multisig Signature here -->
+<div class="section" id="multisigSection">
+  <h2 class="section-header">Multisig Signature</h2>
+  <div class="content">
+    <button id="generateSignatureButton">Generate Multisig Signature</button>
+    <div id="signatureContainer"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const generateSignatureButton = document.getElementById("generateSignatureButton");
+  const signatureContainer = document.getElementById("signatureContainer");
+
+  generateSignatureButton.addEventListener("click", function() {
+    // Simulate multisig signature generation (replace with actual logic)
+    const privateKey1 = "private_key_1";
+    const privateKey2 = "private_key_2";
+    const message = "message_to_sign";
+
+    // Perform multisig signature (replace with actual signature generation code)
+    const multisigSignature = generateMultisigSignature(privateKey1, privateKey2, message);
+
+    // Display the generated signature
+    const signatureElement = document.createElement("div");
+    signatureElement.textContent = "Multisig Signature: " + multisigSignature;
+    signatureContainer.appendChild(signatureElement);
+  });
+
+  // Simulated multisig signature generation function
+  function generateMultisigSignature(privateKey1, privateKey2, message) {
+    // Simulated implementation - replace with proper signature generation logic
+    const combinedPrivateKey = combinePrivateKeys(privateKey1, privateKey2);
+    const signature = signMessageWithPrivateKey(combinedPrivateKey, message);
+    return signature;
+  }
+
+  // Simulated functions - replace with actual implementations
+  function combinePrivateKeys(privateKey1, privateKey2) {
+    return privateKey1 + privateKey2; // Replace with actual key combination logic
+  }
+
+  function signMessageWithPrivateKey(privateKey, message) {
+    // Simulated implementation - replace with actual signature logic
+    return "signature_for_" + message + "_with_" + privateKey;
+  }
+});
+</script>
       </div>      
     </div>
     <div class="section">
