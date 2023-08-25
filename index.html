@@ -61,8 +61,31 @@
     <div class="section">
       <div class="section-header">Npub and Bitpac</div>
       <div class="content">
-        
-      </div>
+        <div class="section" id="joinBitpacSection">
+  <h2 class="section-header">Join Bitpac</h2>
+  <div class="content">
+    <button id="addNpubKeyButton">Add Npub Key</button>
+    <div id="npubKeysContainer"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const addNpubKeyButton = document.getElementById("addNpubKeyButton");
+  const npubKeysContainer = document.getElementById("npubKeysContainer");
+
+  addNpubKeyButton.addEventListener("click", function() {
+    // Simulate adding an Npub key using Nostr Tools (replace this with actual tool usage)
+    const newNpubKey = "your_generated_npub_key";
+
+    // Create a new element to display the added Npub key
+    const npubKeyElement = document.createElement("div");
+    npubKeyElement.textContent = "Npub Key: " + newNpubKey;
+    npubKeysContainer.appendChild(npubKeyElement);
+  });
+});
+</script>
+  </div>
     </div>
     <div class="section">
       <div class="section-header">Multisig Signature</div>
